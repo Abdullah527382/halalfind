@@ -9,3 +9,9 @@ WORKDIR /opt/app
 EXPOSE 8080
 
 CMD ["air"]
+
+# Production:
+
+# RUN go build main.go
+
+# CMD ["./main"]

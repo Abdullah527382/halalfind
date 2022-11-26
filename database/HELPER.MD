@@ -19,3 +19,7 @@ docker run --name postgres -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgre
 # Connect to the database
 
 psql -h localhost -p 5432 -U postgres -d halalfind
+
+# Our app should be similar to this:
+
+https://github.com/qingwave/weave/commit/15e2ce08ce85776372e1be102e9a14633de00fe3
