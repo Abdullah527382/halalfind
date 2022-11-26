@@ -20,3 +20,7 @@ https://world.openfoodfacts.org/data
 ### Application structure:
 
 https://www.calhoun.io/using-mvc-to-structure-go-web-applications/
+
+### Frontend (follow this guide)
+
+https://betterprogramming.pub/how-to-serve-a-single-page-application-using-go-4b9a38d92987
