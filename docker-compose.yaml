@@ -8,6 +8,17 @@ services:
       - 8080:8080
     volumes:
       - .:/opt/app
+  client:
+    build:
+      dockerfile: halalfind-frontend/Dockerfile
+      context: .
+    ports:
+      - 3000:3000
+    environment:
+      # TODO: Check if this actually makes a difference in vite hot reloads
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./halalfind-frontend/.:/app
   db:
     image: postgres:latest
     restart: always
