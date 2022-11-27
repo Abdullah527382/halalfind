@@ -1,4 +1,4 @@
-package html
+package views
 
 type Template struct {
   template *template.Template

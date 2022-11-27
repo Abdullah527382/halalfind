@@ -1,24 +1,25 @@
 package main
 
 import (
-  "net/http"
+  // "net/http"
   "github.com/gin-gonic/gin"
+  // "fmt"
+  "main/app/controllers"
 )
+
+// import . "main/app/controllers"
 
 // http://localhost:8080/ping
 
 func main() {
   r := gin.Default()
-  r.GET("/ping", func(c *gin.Context) {
-    c.JSON(http.StatusOK, gin.H{
-      "message": "BYE YOU HELLOOOOOOOOOOOO",
-    })
-  })
+  // Group our routes:
+  apiGroup := r.Group("/api")
 
-  r.GET("/test", func(c *gin.Context) {
-    c.JSON(http.StatusOK, gin.H{
-      "message": "HELLO mate",
-    })
+  foodGroup := apiGroup.Group("/food")
+
+  foodGroup.GET("/:foodid",  func(c *gin.Context) {
+    controllers.GetFoods(c)
   })
 
   r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
