@@ -2,6 +2,8 @@
 import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
+Vue.use(MdButton)
+
 <template>
   <main>
     <h1>
