@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Go api and client to determine halal foods, open source to users</h1>
   </div>
 </template>
 
